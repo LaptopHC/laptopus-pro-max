@@ -1,0 +1,36 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <h1>Gi\uc0\u7887  h\'e0ng</h1>\
+\
+<div id="cart"></div>\
+\
+<button onclick="checkout()">\uc0\u272 \u7863 t h\'e0ng</button>\
+\
+<script>\
+\
+let cart=JSON.parse(localStorage.getItem("cart"))||[]\
+\
+cart.forEach(p=>\{\
+\
+document.getElementById("cart").innerHTML+=\
+\
+`<p>$\{p.name\} - $\{p.price.toLocaleString()\}\uc0\u273 </p>`\
+\
+\})\
+\
+function checkout()\{\
+\
+alert("\uc0\u272 \u7863 t h\'e0ng th\'e0nh c\'f4ng")\
+\
+localStorage.removeItem("cart")\
+\
+location.reload()\
+\
+\}\
+\
+</script>}
